@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Marcellus:regular);
 body {
   color: #fff;
   background-color: black;
+  font-family: "Mulish", sans-serif;
 }
 
 ._container {
@@ -75,6 +77,105 @@ body {
 }
 .options__button:hover {
   opacity: 1;
+}
+
+.banner {
+  border-bottom: 2px solid #2f2e2e;
+  position: relative;
+  overflow: hidden;
+}
+.banner__image {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+}
+.banner__content {
+  padding-top: 122px;
+  padding-bottom: 188px;
+  max-width: 562px;
+  box-shadow: 100px 0px 100px #000000;
+  background-color: #000000;
+}
+.banner__title {
+  margin-top: 0;
+  font-family: "Marcellus", sans-serif;
+  font-size: 80px;
+  line-height: 70px;
+}
+.banner__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.banner__stat {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.banner__year {
+  margin-right: 19px;
+}
+.banner__age {
+  margin-right: 19px;
+  border-radius: 50px;
+  width: 59.75px;
+  text-align: center;
+  position: relative;
+}
+.banner__age::before {
+  content: "";
+  position: absolute;
+  width: 59.75px;
+  height: 24px;
+  display: block;
+  background: url("./images/border.svg");
+  top: calc(50% - 0.7rem);
+}
+.banner__long {
+  margin-right: 50px;
+}
+.banner__rating {
+  margin-right: 10px;
+}
+.banner__text {
+  max-width: 507px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #c2c2c2;
+}
+
+.banner__buttons {
+  margin-top: 40px;
+  display: flex;
+}
+.banner__button {
+  height: 50px;
+  width: 141px;
+  padding-left: 30px;
+  align-items: center;
+  display: flex;
+  margin-right: 30px;
+}
+.banner__button p {
+  margin-left: 15px;
+}
+
+.button {
+  border: none;
+  border-radius: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button_blue {
+  box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+  color: white;
+}
+.button_white {
+  width: 195px;
+  height: 50px;
+  background-color: #fff;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
