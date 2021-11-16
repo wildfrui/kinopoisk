@@ -186,6 +186,55 @@ body {
   color: black;
 }
 
+.trending {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.trending__info {
+  font-size: 28px;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.trending__info::before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  left: 0;
+  width: 8px;
+  height: 35px;
+  display: block;
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+}
+.trending__info::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 35px;
+  left: 300px;
+  top: 0;
+  background: url("./images/arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.trending__films {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.trending__film {
+  cursor: pointer;
+  width: 206px;
+  height: 309px;
+  transition: all 0.2s;
+}
+.trending__film:hover {
+  filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
+}
+
 /*# sourceMappingURL=style.css.map */
       /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -385,6 +434,6 @@ template {
   </section>
   <section class="trending _container">
     <div class="trending__info">Trending TV Shows</div>
-    <div class="trending__films"> <img src="./images/shows/1.png"><img src="./images/shows/2.png"><img src="./images/shows/3.png"><img src="./images/shows/4.png"><img src="./images/shows/5.png"><img src="./images/shows/6.png"></div>
+    <div class="trending__films"> <img class="trending__film" src="./images/shows/1.png"><img class="trending__film" src="./images/shows/2.png"><img class="trending__film" src="./images/shows/3.png"><img class="trending__film" src="./images/shows/4.png"><img class="trending__film" src="./images/shows/5.png"><img class="trending__film" src="./images/shows/6.png"></div>
   </section>
 </html>

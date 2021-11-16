@@ -205,3 +205,53 @@ body {
 }
 
 //trending
+
+.trending {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  &__info {
+    font-size: 28px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 50px;
+      left: 0;
+      width: 8px;
+      height: 35px;
+      display: block;
+      background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 35px;
+      left: 300px;
+      top: 0;
+
+      background: url("./images/arrow.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  &__films {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__film {
+    cursor: pointer;
+    width: 206px;
+    height: 309px;
+    transition: all 0.2s;
+    &:hover {
+      filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
+    }
+  }
+}
