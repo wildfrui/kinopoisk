@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+body {
+  color: #fff;
+  background-color: black;
+}
+
+._container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px 0px 15px;
+}
+
+.header {
+  margin-top: 15px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+}
+.menu__item {
+  margin-right: 54px;
+}
+.menu__link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  opacity: 0.5;
+}
+.menu__link:hover {
+  border-bottom: 1px solid #26fff2;
+  opacity: 1;
+}
+
+.options {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
+.options__item:not(:last-child) {
+  margin-right: 20px;
+}
+.options__button {
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+/*# sourceMappingURL=style.css.map */
