@@ -213,7 +213,6 @@ body {
   display: block;
   width: 30px;
   height: 35px;
-  left: 300px;
   top: 0;
   background: url("./images/arrow.png");
   background-repeat: no-repeat;
@@ -221,6 +220,12 @@ body {
 }
 .trending__info_films::after {
   left: 260px;
+}
+.trending__info_shows::after {
+  left: 300px;
+}
+.trending__info_genres::after {
+  left: 240px;
 }
 .trending__films {
   display: flex;
@@ -237,10 +242,27 @@ body {
 .trending__film:hover {
   filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
 }
+.trending__genres {
+  margin-top: 80px;
+}
 .trending__button {
   margin-top: 55px;
   width: 141px;
   height: 50px;
+}
+
+.genres {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.genres__item {
+  flex: 1 1 25%;
+  margin-bottom: 10px;
+}
+.genres__item img {
+  min-width: 340px;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -441,12 +463,25 @@ template {
     </div>
   </section>
   <section class="trending _container">
-    <div class="trending__info">Trending TV Shows</div>
+    <div class="trending__info trending__info_shows">Trending TV Shows</div>
     <div class="trending__films"> <img class="trending__film" src="./images/shows/1.png"><img class="trending__film" src="./images/shows/2.png"><img class="trending__film" src="./images/shows/3.png"><img class="trending__film" src="./images/shows/4.png"><img class="trending__film" src="./images/shows/5.png"><img class="trending__film" src="./images/shows/6.png"></div>
   </section>
   <section class="trending _container">
     <div class="trending__info trending__info_films">Trending movies</div>
     <div class="trending__films"> <img class="trending__film" src="./images/movies/1.png"><img class="trending__film" src="./images/movies/2.png"><img class="trending__film" src="./images/movies/3.png"><img class="trending__film" src="./images/movies/4.png"><img class="trending__film" src="./images/movies/5.png"><img class="trending__film" src="./images/movies/6.png"></div>
     <button class="button trending__button button_blue">See more</button>
+  </section>
+  <section class="trending _container trending__genres">
+    <div class="trending__info trending__info_genres">Popular genres</div>
+    <div class="trending__items genres"> 
+      <div class="genres__item"><img class="trending__film" src="./images/genres/1.png"></div>
+      <div class="genres__item"><img class="trending__film" src="./images/genres/2.png"></div>
+      <div class="genres__item"><img class="trending__film" src="./images/genres/3.png"></div>
+      <div class="genres__item"><img class="trending__film" src="./images/genres/4.png"></div>
+      <div class="genres__item"><img class="trending__film" src="./images/genres/5.png"></div>
+      <div class="genres__item"><img class="trending__film" src="./images/genres/6.png"></div>
+      <div class="genres__item"><img class="trending__film" src="./images/genres/7.png"></div>
+      <div class="genres__item"><img class="trending__film" src="./images/genres/8.png"></div>
+    </div>
   </section>
 </html>
