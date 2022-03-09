@@ -95,8 +95,6 @@ body {
   border-bottom: 2px solid #2f2e2e;
   position: relative;
   overflow: hidden;
-  &__container {
-  }
 
   &__image {
     z-index: -1;
@@ -253,6 +251,11 @@ body {
         left: 240px;
       }
     }
+    &_directors {
+      &::after {
+        left: 430px;
+      }
+    }
   }
   &__films {
     display: flex;
@@ -265,9 +268,6 @@ body {
     width: 206px;
     height: 309px;
     transition: all 0.2s;
-    &:hover {
-      filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
-    }
   }
 
   &__genres {
@@ -286,10 +286,177 @@ body {
   justify-content: space-between;
 
   &__item {
-    flex: 1 1 25%;
-    margin-bottom: 10px;
-    img {
-      min-width: 340px;
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 198px;
+    flex: 1 0 330px;
+    margin-right: 27px;
+    margin-bottom: 27px;
+    background: yellow;
+    border-radius: 20px;
+    &_romance {
+      background: linear-gradient(109.31deg, #fd093f 2.4%, #f383f1 100%);
     }
+    &_drama {
+      background: linear-gradient(114.5deg, #0fffda 2.22%, #3cdb77 68.84%);
+    }
+    &_historical {
+      background: linear-gradient(109.31deg, #b936ff 2.4%, #57deda 100%);
+    }
+    &_action {
+      background: linear-gradient(
+        109.31deg,
+        #fd093f 2.4%,
+        #fb1378 2.41%,
+        #fccb1a 100%
+      );
+    }
+    &_scifi {
+      background: linear-gradient(109.31deg, #ff6472 2.4%, #fda75d 100%);
+    }
+    &_horror {
+      background: linear-gradient(110.16deg, #13547a 2.37%, #80d0c7 96.77%);
+    }
+    &_comedy {
+      background: linear-gradient(109.93deg, #fff77b 2.37%, #ffbf42 50%);
+    }
+
+    &_documentary {
+      background: linear-gradient(
+        109.31deg,
+        #1fa2ff 2.4%,
+        #1fa2ff 2.41%,
+        #1f535c 97.46%
+      );
+    }
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+.directors {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    flex-grow: 0 0 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+  &__image img {
+    border-radius: 50%;
+  }
+  &__name {
+    margin-top: 20px;
+  }
+}
+
+.featured {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 40px;
+  &__item {
+    flex: 1 1 50%;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
+    }
+  }
+  &__poster {
+    background-color: transparent;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  &__poster img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  &__soon {
+    display: flex;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(70.02deg, #0d1a73 10.67%, #000000 70.52%);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text {
+    margin-top: 31px;
+    font-size: 64px;
+    line-height: 20px;
+  }
+}
+
+.register {
+  padding: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-repeat: no-repeat;
+  background-position: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__items {
+    height: 270px;
+    width: 1224px;
+    background: url("./images/purple.png");
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    max-width: 780px;
+  }
+  &__button {
+    margin-right: 100px;
+    width: 141px;
+    height: 50px;
+  }
+}
+
+.footer {
+  background: #101012;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__menu {
+    margin-left: 54px;
+    display: flex;
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: #c2c2c2;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 20px;
   }
 }

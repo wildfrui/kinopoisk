@@ -1,0 +1,127 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        style 
+            include styles/style.css
+            include styles/normalize.css
+    body 
+        include blocks/header.pug
+
+        section.banner
+            .banner__container._container
+                img.banner__image(src="./images/banner.png")
+                .banner__content 
+                    h1.banner__title Zack Snyder's Justice League
+                    .banner__info 
+                        .banner__stat.banner__year 2021
+                        .banner__stat.banner__age 18+
+                        .banner__stat.banner__long 4h 2min
+                        .banner__stat.banner__rating 8.8
+                        img.banner__star(src="./images/star.png")
+                    p.banner__text Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
+                    .banner__buttons 
+                        button.banner__button.button.button_blue 
+                            img(src="./images/play.png")
+                            p Watch
+                        button.button.button_white More information
+
+        section.trending._container
+            .trending__info.trending__info_shows Trending TV Shows
+            .trending__films 
+                img.trending__film(src="./images/shows/1.png")
+                img.trending__film(src="./images/shows/2.png")
+                img.trending__film(src="./images/shows/3.png")
+                img.trending__film(src="./images/shows/4.png")
+                img.trending__film(src="./images/shows/5.png")
+                img.trending__film(src="./images/shows/6.png")
+
+        section.trending._container
+            .trending__info.trending__info_films Trending movies
+            .trending__films 
+                img.trending__film(src="./images/movies/1.png")
+                img.trending__film(src="./images/movies/2.png")
+                img.trending__film(src="./images/movies/3.png")
+                img.trending__film(src="./images/movies/4.png")
+                img.trending__film(src="./images/movies/5.png")
+                img.trending__film(src="./images/movies/6.png")
+            button.button.trending__button.button_blue See more
+
+        section.trending._container.trending__genres
+            .trending__info.trending__info_genres Popular genres
+            .trending__items.genres 
+                a.genres__item.genres__item_romance(href="/")
+                    .genres__img
+                        img(src="./images/genres/1.svg")
+                    .genres__title Romance
+                a.genres__item.genres__item_drama(href="/")
+                    .genres__img
+                        img(src="./images/genres/2.svg")
+                    .genres__title Drama
+                a.genres__item.genres__item_historical(href="/")
+                    .genres__img
+                        img(src="./images/genres/3.svg")
+                    .genres__title Historical
+                a.genres__item.genres__item_action(href="/")
+                    .genres__img
+                        img(src="./images/genres/4.svg")
+                    .genres__title Action
+                a.genres__item.genres__item_scifi(href="/")
+                    .genres__img
+                        img(src="./images/genres/5.svg")
+                    .genres__title Sci-fi
+                a.genres__item.genres__item_horror(href="/")
+                    .genres__img 
+                        img(src="./images/genres/6.svg")
+                    .genres__title Horror
+                a.genres__item.genres__item_comedy(href="/")
+                    .genres__img
+                        img(src="./images/genres/7.svg")
+                    .genres__title Comedy
+                a.genres__item.genres__item_documentary(href="/")
+                    .genres__img
+                        img(src="./images/genres/8.svg")
+                    .genres__title Documentary
+            
+        section.trending._container
+            .trending__info.trending__info_directors Popular Actors and Directors
+            .trending__directors.directors 
+                .directors__item
+                    .directors__image 
+                        img(src="./images/directors/1.png")
+                    .directors__name Samantha Bowen
+                .directors__item
+                    .directors__image 
+                        img(src="./images/directors/2.png")
+                    .directors__name Samantha Bowen
+                .directors__item
+                    .directors__image 
+                        img(src="./images/directors/3.png")
+                    .directors__name Samantha Bowen
+                .directors__item
+                    .directors__image 
+                        img(src="./images/directors/4.png")
+                    .directors__name Samantha Bowen
+                .directors__item
+                    .directors__image 
+                        img(src="./images/directors/5.png")
+                    .directors__name Samantha Bowen
+                .directors__item
+                    .directors__image 
+                        img(src="./images/directors/6.png")
+                    .directors__name Samantha Bowen
+        section.featured._container
+            a.featured__item.featured__poster(href="#") 
+                img(src="./images/bunny.png")
+            a.featured__item.featured__soon(href="#") 
+                .featured__year 
+                    img(src="./images/year.png", alt="")
+                .featured__text Coming Soon...
+        section.register._container 
+            .register__items 
+                .register__text Are You New Here ? Don’t wait, Register Now.
+                button.register__button.button.button_blue Register
+        include blocks/footer.pug

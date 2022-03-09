@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Marcellus:regular);
+body {
+  color: #fff;
+  background-color: black;
+  font-family: "Mulish", sans-serif;
+}
+
+._container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px 0px 15px;
+}
+
+.header {
+  margin-top: 17px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.menu__item {
+  margin-right: 58px;
+  padding-top: 10px;
+}
+.menu__link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  font-family: "Mulish", sans-serif;
+  font-size: 17px;
+  opacity: 0.5;
+}
+.menu__link::after {
+  content: "";
+  opacity: 0;
+  margin-top: 10px;
+  display: block;
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+  border-radius: 50px;
+  width: 0px;
+  height: 1px;
+  transition: all 0.5s;
+}
+.menu__link:hover {
+  opacity: 1;
+}
+.menu__link:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+
+.options {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+}
+.options__item:not(:last-child) {
+  margin-right: 30px;
+}
+.options__button {
+  opacity: 0.5;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.options__button:hover {
+  opacity: 1;
+}
+
+.banner {
+  border-bottom: 2px solid #2f2e2e;
+  position: relative;
+  overflow: hidden;
+}
+.banner__image {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+}
+.banner__content {
+  padding-top: 122px;
+  padding-bottom: 188px;
+  max-width: 562px;
+  box-shadow: 100px 0px 100px #000000;
+  background-color: #000000;
+}
+.banner__title {
+  margin-top: 0;
+  font-family: "Marcellus", sans-serif;
+  font-size: 80px;
+  line-height: 70px;
+}
+.banner__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.banner__stat {
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.banner__year {
+  margin-right: 19px;
+}
+.banner__age {
+  margin-right: 19px;
+  border-radius: 50px;
+  width: 59.75px;
+  text-align: center;
+  position: relative;
+}
+.banner__age::before {
+  content: "";
+  position: absolute;
+  width: 59.75px;
+  height: 24px;
+  display: block;
+  background: url("./images/border.svg");
+  top: calc(50% - 0.7rem);
+}
+.banner__long {
+  margin-right: 50px;
+}
+.banner__rating {
+  margin-right: 10px;
+}
+.banner__text {
+  max-width: 507px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #c2c2c2;
+}
+
+.banner__buttons {
+  margin-top: 40px;
+  display: flex;
+}
+.banner__button {
+  height: 50px;
+  width: 141px;
+  padding-left: 30px;
+  align-items: center;
+  display: flex;
+  margin-right: 30px;
+}
+.banner__button p {
+  margin-left: 15px;
+}
+
+.button {
+  border: none;
+  border-radius: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button_blue {
+  box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+  color: white;
+}
+.button_white {
+  width: 195px;
+  height: 50px;
+  background-color: #fff;
+  color: black;
+}
+
+.trending {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.trending__info {
+  font-size: 28px;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.trending__info::before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  left: 0;
+  width: 8px;
+  height: 35px;
+  display: block;
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+}
+.trending__info::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 35px;
+  top: 0;
+  background: url("./images/arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.trending__info_films::after {
+  left: 260px;
+}
+.trending__info_shows::after {
+  left: 300px;
+}
+.trending__info_genres::after {
+  left: 240px;
+}
+.trending__info_directors::after {
+  left: 430px;
+}
+.trending__films {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.trending__film {
+  cursor: pointer;
+  width: 206px;
+  height: 309px;
+  transition: all 0.2s;
+}
+.trending__genres {
+  margin-top: 80px;
+}
+.trending__button {
+  margin-top: 55px;
+  width: 141px;
+  height: 50px;
+}
+
+.genres {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.genres__item {
+  display: inline-flex;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 198px;
+  flex: 1 0 330px;
+  margin-right: 27px;
+  margin-bottom: 27px;
+  background: yellow;
+  border-radius: 20px;
+}
+.genres__item_romance {
+  background: linear-gradient(109.31deg, #fd093f 2.4%, #f383f1 100%);
+}
+.genres__item_drama {
+  background: linear-gradient(114.5deg, #0fffda 2.22%, #3cdb77 68.84%);
+}
+.genres__item_historical {
+  background: linear-gradient(109.31deg, #b936ff 2.4%, #57deda 100%);
+}
+.genres__item_action {
+  background: linear-gradient(109.31deg, #fd093f 2.4%, #fb1378 2.41%, #fccb1a 100%);
+}
+.genres__item_scifi {
+  background: linear-gradient(109.31deg, #ff6472 2.4%, #fda75d 100%);
+}
+.genres__item_horror {
+  background: linear-gradient(110.16deg, #13547a 2.37%, #80d0c7 96.77%);
+}
+.genres__item_comedy {
+  background: linear-gradient(109.93deg, #fff77b 2.37%, #ffbf42 50%);
+}
+.genres__item_documentary {
+  background: linear-gradient(109.31deg, #1fa2ff 2.4%, #1fa2ff 2.41%, #1f535c 97.46%);
+}
+.genres__title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.directors {
+  display: flex;
+  flex-wrap: wrap;
+}
+.directors__item {
+  flex-grow: 0 0 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.directors__item:not(:last-child) {
+  margin-right: 60px;
+}
+.directors__image img {
+  border-radius: 50%;
+}
+.directors__name {
+  margin-top: 20px;
+}
+
+.featured {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.featured__item {
+  flex: 1 1 50%;
+  transition: all 0.3s;
+}
+.featured__item:hover {
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
+}
+.featured__poster {
+  background-color: transparent;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.featured__poster img {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.featured__soon {
+  display: flex;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(70.02deg, #0d1a73 10.67%, #000000 70.52%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.featured__text {
+  margin-top: 31px;
+  font-size: 64px;
+  line-height: 20px;
+}
+
+.register {
+  padding: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-repeat: no-repeat;
+  background-position: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register__items {
+  height: 270px;
+  width: 1224px;
+  background: url("./images/purple.png");
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.register__text {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+  max-width: 780px;
+}
+.register__button {
+  margin-right: 100px;
+  width: 141px;
+  height: 50px;
+}
+
+.footer {
+  background: #101012;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.footer__content {
+  display: flex;
+  justify-content: center;
+}
+.footer__menu {
+  margin-left: 54px;
+  display: flex;
+}
+.footer__row {
+  display: flex;
+  flex-direction: column;
+}
+.footer__row:not(:last-child) {
+  margin-right: 60px;
+}
+.footer__link {
+  text-decoration: none;
+  color: #c2c2c2;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/*# sourceMappingURL=normalize.min.css.map */
+
+    </style>
+  </head>
+  <body> 
+    <header class="header"> 
+      <div class="header__container _container"><img class="header__logo" src="./images/header/logo.svg">
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"> <a class="menu__link" href="nikuda">Home</a></li>
+            <li class="menu__item"> <a class="menu__link" href="nikuda">TV Shows</a></li>
+            <li class="menu__item"> <a class="menu__link" href="nikuda">Movies</a></li>
+            <li class="menu__item"> <a class="menu__link" href="nikuda">Series</a></li>
+          </ul>
+        </nav>
+        <ul class="header__options options">
+          <li class="options__item"> 
+            <button class="options__button options__button_search"><img src="./images/options/search.svg" alt=""></button>
+          </li>
+          <li class="options__item"> 
+            <button class="options__button options__button_notice"><img src="./images/options/notice.svg" alt=""></button>
+          </li>
+          <li class="options__item"> 
+            <button class="options__button options__button_user"><img src="./images/options/user.png" alt=""></button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner__container _container"><img class="banner__image" src="./images/banner.png">
+        <div class="banner__content"> 
+          <h1 class="banner__title">Zack Snyder's Justice League</h1>
+          <div class="banner__info"> 
+            <div class="banner__stat banner__year">2021</div>
+            <div class="banner__stat banner__age">18+</div>
+            <div class="banner__stat banner__long">4h 2min</div>
+            <div class="banner__stat banner__rating">8.8</div><img class="banner__star" src="./images/star.png">
+          </div>
+          <p class="banner__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
+          <div class="banner__buttons"> 
+            <button class="banner__button button button_blue"> <img src="./images/play.png">
+              <p>Watch</p>
+            </button>
+            <button class="button button_white">More information</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trending _container">
+      <div class="trending__info trending__info_shows">Trending TV Shows</div>
+      <div class="trending__films"> <img class="trending__film" src="./images/shows/1.png"><img class="trending__film" src="./images/shows/2.png"><img class="trending__film" src="./images/shows/3.png"><img class="trending__film" src="./images/shows/4.png"><img class="trending__film" src="./images/shows/5.png"><img class="trending__film" src="./images/shows/6.png"></div>
+    </section>
+    <section class="trending _container">
+      <div class="trending__info trending__info_films">Trending movies</div>
+      <div class="trending__films"> <img class="trending__film" src="./images/movies/1.png"><img class="trending__film" src="./images/movies/2.png"><img class="trending__film" src="./images/movies/3.png"><img class="trending__film" src="./images/movies/4.png"><img class="trending__film" src="./images/movies/5.png"><img class="trending__film" src="./images/movies/6.png"></div>
+      <button class="button trending__button button_blue">See more</button>
+    </section>
+    <section class="trending _container trending__genres">
+      <div class="trending__info trending__info_genres">Popular genres</div>
+      <div class="trending__items genres"> <a class="genres__item genres__item_romance" href="/">
+          <div class="genres__img"><img src="./images/genres/1.svg"></div>
+          <div class="genres__title">Romance</div></a><a class="genres__item genres__item_drama" href="/">
+          <div class="genres__img"><img src="./images/genres/2.svg"></div>
+          <div class="genres__title">Drama</div></a><a class="genres__item genres__item_historical" href="/">
+          <div class="genres__img"><img src="./images/genres/3.svg"></div>
+          <div class="genres__title">Historical</div></a><a class="genres__item genres__item_action" href="/">
+          <div class="genres__img"><img src="./images/genres/4.svg"></div>
+          <div class="genres__title">Action</div></a><a class="genres__item genres__item_scifi" href="/">
+          <div class="genres__img"><img src="./images/genres/5.svg"></div>
+          <div class="genres__title">Sci-fi</div></a><a class="genres__item genres__item_horror" href="/">
+          <div class="genres__img"> <img src="./images/genres/6.svg"></div>
+          <div class="genres__title">Horror</div></a><a class="genres__item genres__item_comedy" href="/">
+          <div class="genres__img"><img src="./images/genres/7.svg"></div>
+          <div class="genres__title">Comedy</div></a><a class="genres__item genres__item_documentary" href="/">
+          <div class="genres__img"><img src="./images/genres/8.svg"></div>
+          <div class="genres__title">Documentary</div></a></div>
+    </section>
+    <section class="trending _container">
+      <div class="trending__info trending__info_directors">Popular Actors and Directors</div>
+      <div class="trending__directors directors"> 
+        <div class="directors__item">
+          <div class="directors__image"> <img src="./images/directors/1.png"></div>
+          <div class="directors__name">Samantha Bowen</div>
+        </div>
+        <div class="directors__item">
+          <div class="directors__image"> <img src="./images/directors/2.png"></div>
+          <div class="directors__name">Samantha Bowen</div>
+        </div>
+        <div class="directors__item">
+          <div class="directors__image"> <img src="./images/directors/3.png"></div>
+          <div class="directors__name">Samantha Bowen</div>
+        </div>
+        <div class="directors__item">
+          <div class="directors__image"> <img src="./images/directors/4.png"></div>
+          <div class="directors__name">Samantha Bowen</div>
+        </div>
+        <div class="directors__item">
+          <div class="directors__image"> <img src="./images/directors/5.png"></div>
+          <div class="directors__name">Samantha Bowen</div>
+        </div>
+        <div class="directors__item">
+          <div class="directors__image"> <img src="./images/directors/6.png"></div>
+          <div class="directors__name">Samantha Bowen</div>
+        </div>
+      </div>
+    </section>
+    <section class="featured _container"><a class="featured__item featured__poster" href="#"> <img src="./images/bunny.png"></a><a class="featured__item featured__soon" href="#"> 
+        <div class="featured__year"> <img src="./images/year.png" alt=""></div>
+        <div class="featured__text">Coming Soon...</div></a></section>
+    <section class="register _container"> 
+      <div class="register__items"> 
+        <div class="register__text">Are You New Here ? Don’t wait, Register Now.</div>
+        <button class="register__button button button_blue">Register</button>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__content _container">
+        <div class="footer__logo"> <img src="./images/header/logo.svg" alt=""></div>
+        <div class="footer__menu">
+          <div class="footer__row"> <a class="footer__link" href="/">Voice over and Subtitle</a><a class="footer__link" href="/">Media center</a><a class="footer__link" href="/">Privacy</a><a class="footer__link" href="/">Contact us</a></div>
+          <div class="footer__row"> <a class="footer__link" href="/">Voice Description</a><a class="footer__link" href="/">Investor Relations</a><a class="footer__link" href="/">Legal Provisions</a></div>
+          <div class="footer__row"> <a class="footer__link" href="/">Help Center</a><a class="footer__link" href="/">Job Opportunities</a><a class="footer__link" href="/">Job Opportunities</a></div>
+          <div class="footer__row"> <a class="footer__link" href="/">Gift Cards</a><a class="footer__link" href="/">Terms of Use</a><a class="footer__link" href="/">Corporate Informations</a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
